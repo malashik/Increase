@@ -1,0 +1,34 @@
+block variables
+- Nav = ['P1','P2','P3','P4','P5']
+- NavHref = ['#P1','#P2','#P3','#P4','#P5']
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title webcom-media
+        link(rel="stylesheet", href="./assets/styles/common/menu.min.css")
+    body
+        .modal-window 
+            .modal-window__text Модальное окно
+                span.modal-window__close X
+        include ./common/header.pug
+        .wrapper.main(id="fullpage")
+            .section(data-anchor='P1')
+                include ../blocks/head/head.pug
+            .section(data-anchor='P2')
+                include ../blocks/works/works.pug
+            .section(data-anchor='P3')
+                include ../blocks/advantages/advantages.pug
+            .section(data-anchor='P4')
+                include ../blocks/feedback/feedback.pug
+            .section(data-anchor='P5')
+                include ../blocks/foot/foot.pug
+        script(src="./assets/js/jquery-3.2.1.min.js")
+        script(src="./assets/js/fullpage/jquery.fullPage.min.js")
+        script(src="./assets/js/owl-carousel/owl.carousel.min.js")
+        script(src="./assets/js/map.js")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYBpOUcTHdp-8cmj4sEbxFU6QmLqh64Aw&callback=initMap" async defer)
+        script(src="./assets/js/main.js")

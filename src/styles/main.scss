@@ -1,0 +1,118 @@
+.main{
+    height: 100%;
+    width: 100%;
+    padding: 45px 55px;
+    background: url('../../images/bg/Фон.jpg') center no-repeat;
+    background-size: cover;
+    color: #007cc3;
+}
+.wrapper{
+    height: 100%;
+    width: 460px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.logo{
+    height: 12.8vh;
+    &-pic{
+        max-height: 100%;
+    }
+}
+.info{
+    font-size: 56px;
+    font-family: 'Gabriola', Arial, sans-serif;
+    line-height: 1.0;
+}
+.bold{
+    font-weight: 600;
+}
+.wrap-form {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.38);
+    padding: 25px 30px;
+    font-size: 16px;
+    color: #fff;
+}
+.form{
+    &__text{
+        margin-bottom: 20px;
+        padding: 0 40px;
+        text-align: center;
+    }
+    &__label{
+        border-radius: 3px;
+        height: 38px;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+        margin-bottom: 13px;
+    }
+    &__input{
+        width: 100%;
+        border: none;
+        height: 100%;
+        text-align: center;
+        color: #515151;
+        font-weight: 500;
+    }
+    &__btn{
+        border: none;
+        border-radius: 3px;
+        height: 38px;
+        width: 100%;
+        border-radius: 3px;
+        background-image: -moz-linear-gradient( 90deg, #0069a5 0%, #007cc3 100%);
+        background-image: -webkit-linear-gradient( 90deg, #0069a5 0%, #007cc3 100%);
+        background-image: -ms-linear-gradient( 90deg, #0069a5 0%, #007cc3 100%);
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.31);
+        margin-top: 17px;
+        display: block;
+        color: #fff;
+        animation: btn 1.5s cubic-bezier(.17,.67,.77,.37) infinite;
+    }
+    @keyframes btn{
+        from{
+            transform: scale(.98)
+        }
+        50%{
+            transform: scale(1.03);
+        }
+        100%{
+            transform: scale(.98)
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .main{
+        padding: 40px 0;
+    }
+    .wrapper{
+        margin: auto;
+        width: 85%;
+        max-width: 480px;
+    }
+    .info{
+        font-size: 42px;
+    }
+    .form__text{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 480px){
+    .main{
+        padding: 30px 0;
+    }
+    .wrapper{
+        align-items: center;
+    }
+    .info{
+        font-size: 36px;
+    }
+    .form__text{
+        padding: 0;
+    }
+}
